@@ -33,6 +33,49 @@
   if ([2, 3, 4].includes(hours)) suffix = 'часа'
 */
 
+
+/*
+  У тебя проблема с пониманием "Не возвращает" (!!!)
+  
+  
+  Смотри, когда ты используешь функцию так:
+  
+  function a() {
+    reutrn "Something" // Заметь, что тут return
+  }
+
+  // Дальше, чтобы увидеть это в консоли, тебе нужно:
+  console.log(
+    a()
+  )
+
+  // А когда ты делаешь:
+  function getTimeFromMinutes(time) {
+    let result = "( • )( • )"
+    
+    // do something with it
+    
+    // Тут ты выводишь в консоль. (!)
+    console.log(result)
+    
+    // А это результат работы функции. (!)
+    // Дальше с этим ты можешь делать что хочешь....
+    return result;
+  }
+  
+  // Сейчас выполниться функция и там как раз у тебя был вывод в консоль
+  const res = getTimeFromMinutes(-1)
+
+  // А тут я явно уже рисую в консоль, т.к. ты вернул это из функции
+  console.log(res)
+  
+  // А тут я чуток добавил сиси
+  alert(
+    res + '( . Y . )'
+  )
+  
+*/
+
 // НЕ возвращает  "Ошибка, проверьте данные"
 function getTimeFromMinutes(time) {
   if (typeof time !== "number" || time < 0 || !Number.isInteger(time)) {
